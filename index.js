@@ -157,10 +157,8 @@ function processContains(item, list, cb) {
  * should return 3.
 */
 function processDuplicateFree(list, cb) {
-  var newList = list.filter(function(item, index) {
-    return list.indexOf(item) === index;
-  });
-  cb(newList);
+  var newList = list.filter((item, index) => list.indexOf(item) === index)
+  return cb(newList);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
